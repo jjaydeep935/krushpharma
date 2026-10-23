@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#087f8c">
+<title>Krush Pharma | Pharmacy & Home Delivery</title>
+<style>
+:root{--teal:#087f8c;--deep:#07545c;--mint:#e9f8f5;--ink:#17333a;--muted:#61777c;--line:#dce9e8;--white:#fff;--orange:#ffb454}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#f7fbfa;line-height:1.55}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;color:var(--deep)}
+.logo{width:42px;height:42px;border-radius:13px;background:var(--teal);display:grid;place-items:center;color:#fff;font-size:25px;font-weight:900}
+nav{display:flex;gap:22px;font-size:.94rem;color:var(--muted)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:var(--teal);color:#fff;padding:11px 17px;font-weight:700;cursor:pointer}.nav-cta:hover,.btn:hover{background:var(--deep)}
+.hero{padding:62px 0 48px;background:radial-gradient(circle at 85% 20%,#d8f5ee 0,transparent 32%),linear-gradient(130deg,#f1fbf8,#fff)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:36px}.eyebrow{display:inline-block;background:#dff5ef;color:var(--deep);padding:6px 11px;border-radius:999px;font-size:.83rem;font-weight:800}
+h1{font-size:clamp(2.3rem,5vw,4rem);line-height:1.08;letter-spacing:-1.8px;margin:18px 0}.hero p{font-size:1.08rem;color:var(--muted);max-width:590px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn.secondary{background:#fff;color:var(--deep);border:1px solid var(--line)}
+.hero-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 18px 55px #0b59600d}.medical-art{height:185px;border-radius:20px;background:linear-gradient(135deg,#d9f5ef,#f2fbff);display:grid;place-items:center;font-size:88px}.hero-card h3{margin:18px 0 4px}.hero-card p{font-size:.95rem;margin:0}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:20px 0}.trust div{background:#fff;border:1px solid var(--line);padding:15px;border-radius:14px;font-size:.92rem}.trust strong{display:block;color:var(--deep)}
+section{padding:46px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}.section-head h2{margin:0;font-size:2rem;letter-spacing:-.6px}.section-head p{margin:5px 0 0;color:var(--muted)}
+.searchbar{display:flex;gap:10px;margin:20px 0 18px}.searchbar input{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;min-height:245px}.pill{font-size:.75rem;background:#edf8f6;color:var(--deep);border-radius:999px;padding:5px 9px;align-self:flex-start;font-weight:800}.product-icon{font-size:34px;margin:12px 0 2px}.product h3{margin:3px 0;font-size:1.06rem}.product p{margin:4px 0 14px;color:var(--muted);font-size:.9rem}.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}.price{font-size:1.12rem;font-weight:800}.small-btn{border:0;border-radius:10px;background:var(--mint);color:var(--deep);font-weight:800;padding:9px 12px;cursor:pointer}.small-btn:hover{background:#d1eee7}
+.note{background:#fff7e8;border:1px solid #f5dfb8;color:#79531d;padding:14px 16px;border-radius:13px;font-size:.9rem;margin-top:18px}
+.delivery{background:var(--deep);color:#fff;border-radius:24px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.delivery p{color:#d3eeee}.delivery .btn{background:#fff;color:var(--deep)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-card{background:#fff;border:1px solid var(--line);padding:22px;border-radius:18px}.contact-card h3{margin:0 0 10px}.contact-card p{margin:7px 0;color:var(--muted)}.contact-card a{color:var(--teal);font-weight:700;overflow-wrap:anywhere}
+.cartbar{position:fixed;bottom:16px;right:16px;z-index:6;background:var(--ink);color:#fff;border-radius:15px;padding:12px 16px;box-shadow:0 8px 25px #0002;display:flex;align-items:center;gap:12px}.cartbar button{background:var(--orange);color:#3d2b12;border:0;border-radius:9px;padding:8px 11px;font-weight:800;cursor:pointer}
+footer{background:#edf6f4;padding:25px 0;color:var(--muted);font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.modal-backdrop{display:none;position:fixed;inset:0;background:#082d32a8;z-index:10;padding:18px;align-items:center;justify-content:center}.modal{background:#fff;width:min(520px,100%);border-radius:20px;padding:24px;max-height:90vh;overflow:auto}.modal h2{margin-top:0}.modal input,.modal textarea{display:block;width:100%;margin:8px 0 13px;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit}.modal .btn{width:100%}.close{float:right;border:0;background:#edf6f4;border-radius:8px;padding:6px 10px;cursor:pointer}
+@media(max-width:760px){nav{display:none}.hero-grid,.delivery,.contact-grid{grid-template-columns:1fr}.hero{padding-top:40px}.products{grid-template-columns:repeat(2,1fr)}.trust{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:480px){.products{grid-template-columns:1fr}.cartbar{left:12px;right:12px;justify-content:space-between}.nav-cta{padding:9px 11px}.hero-card{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><span class="logo">+</span><span>Krush Pharma<small style="display:block;font-size:.68rem;color:#6c8589;font-weight:600;letter-spacing:.6px">CARE THAT COMES CLOSER</small></span></a>
+  <nav><a href="#medicines">Medicines</a><a href="#delivery">Home Delivery</a><a href="#contact">Contact</a></nav>
+  <a class="nav-cta" href="#medicines">Browse items</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div><span class="eyebrow">Your neighbourhood pharmacy</span>
+    <h1>Everyday healthcare,<br><span style="color:var(--teal)">made easier.</span></h1>
+    <p>Shop everyday pharmacy essentials from Krush Pharma. Contact us to confirm stock, get pharmacist guidance, and check delivery availability in your area.</p>
+    <div class="actions"><a class="btn" href="#medicines">Browse products&nbsp; ↓</a><a class="btn secondary" href="tel:8928383761">☎ Call the pharmacy</a></div>
+    <div class="trust"><div><strong>✓ Trusted service</strong>Personal assistance</div><div><strong>⌂ Local delivery</strong>Subject to area</div><div><strong>＋ Pharmacy care</strong>Ask our pharmacist</div></div>
+  </div>
+  <div class="hero-card"><div class="medical-art">🩺💊</div><h3>Welcome to Krush Pharma</h3><p>Owned by <strong>Prakash Gupta</strong>. Here to help you find everyday health essentials and arrange delivery where available.</p></div>
+</div></section>
+
+<section id="medicines"><div class="wrap">
+  <div class="section-head"><div><h2>Popular essentials</h2><p>Sample catalogue — please confirm current stock and final prices with the pharmacy.</p></div></div>
+  <div class="searchbar"><input id="search" type="search" placeholder="Search products..." aria-label="Search products"></div>
+  <div class="products" id="products"></div>
+  <div class="note"><strong>Important:</strong> The prices below are illustrative placeholders, not verified Krush Pharma prices. Replace them with your actual selling prices before publishing. Prescription medicines require a valid prescription and pharmacist review. No medicine should be started without appropriate advice.</div>
+</div></section>
+
+<section id="delivery"><div class="wrap"><div class="delivery">
+  <div><span class="eyebrow" style="background:#d4f1e9">Convenient service</span><h2>Need home delivery?</h2><p>Send us your item list and delivery area. We’ll confirm availability, delivery charges, timing, and any prescription requirements before accepting an order.</p><a class="btn" href="mailto:krushpharma.01@gmail.com?subject=Krush%20Pharma%20Delivery%20Enquiry">Email a delivery enquiry</a></div>
+  <div style="background:#ffffff12;border:1px solid #ffffff25;border-radius:18px;padding:20px"><h3 style="margin-top:0">How it works</h3><p>1. Browse the sample catalogue.</p><p>2. Add items to your enquiry list.</p><p>3. Submit your name, phone, and delivery area.</p><p>4. The pharmacy confirms details with you directly.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="section-head"><div><h2>Contact Krush Pharma</h2><p>Questions about products, stock, or delivery? Get in touch.</p></div></div>
+  <div class="contact-grid">
+    <div class="contact-card"><h3>📞 Phone</h3><p>Call for stock and delivery confirmation.</p><a href="tel:8928383761">8928383761</a></div>
+    <div class="contact-card"><h3>✉️ Email</h3><p>Send an enquiry any time.</p><a href="mailto:krushpharma.01@gmail.com">krushpharma.01@gmail.com</a></div>
+    <div class="contact-card"><h3>👤 Owner</h3><p>Prakash Gupta</p><p>Krush Pharma</p></div>
+    <div class="contact-card"><h3>🚚 Delivery</h3><p>Online delivery enquiries accepted. Service area, fees, and timing must be confirmed by the pharmacy.</p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> Krush Pharma. All rights reserved.</span><span>Health information on this site is general and is not a substitute for professional medical advice.</span></div></footer>
+
+<div class="cartbar"><span>Enquiry list: <strong id="count">0</strong> item(s)</span><button onclick="openModal()">Send enquiry</button></div>
+<div class="modal-backdrop" id="backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal"><button class="close" onclick="closeModal()" aria-label="Close">✕</button><h2 id="modalTitle">Delivery / stock enquiry</h2><p style="color:#61777c">This sends an enquiry by opening your email app; it does not take payment or confirm an order.</p>
+  <form id="orderForm"><label>Your name<input id="customerName" required placeholder="Full name"></label><label>Phone number<input id="customerPhone" required type="tel" placeholder="Your phone number"></label><label>Delivery area / PIN code<input id="area" required placeholder="Area and PIN code"></label><label>Notes (optional)<textarea id="notes" rows="3" placeholder="Quantity, prescription details to discuss, etc."></textarea></label><button class="btn" type="submit">Continue by email</button></form></div>
+</div>
+<script>
+const products = [
+ {name:"Paracetamol 500 mg",detail:"Common fever and pain relief; use as directed.",price:20,pack:"Sample price / strip",icon:"💊",tag:"OTC example"},
+ {name:"ORS Sachets",detail:"Oral rehydration salts for fluid replacement.",price:20,pack:"Sample price / sachet",icon:"💧",tag:"Everyday essential"},
+ {name:"Cetirizine 10 mg",detail:"For allergy symptoms; may cause drowsiness.",price:15,pack:"Sample price / strip",icon:"🌿",tag:"Ask pharmacist"},
+ {name:"Antacid Chewable Tablets",detail:"For occasional acidity; check label and suitability.",price:30,pack:"Sample price / pack",icon:"🫧",tag:"OTC example"},
+ {name:"Adhesive Bandages",detail:"Basic first-aid dressing strips.",price:25,pack:"Sample price / pack",icon:"🩹",tag:"First aid"},
+ {name:"Antiseptic Solution",detail:"For appropriate external use only; follow label.",price:45,pack:"Sample price / bottle",icon:"🧴",tag:"First aid"}
+];
+const selected = new Set();
+const container = document.getElementById("products");
+function render(){
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const filtered=products.filter(p=>(p.name+" "+p.detail+" "+p.tag).toLowerCase().includes(q));
+ container.innerHTML=filtered.map(p=>`<article class="product"><span class="pill">${p.tag}</span><div class="product-icon">${p.icon}</div><h3>${p.name}</h3><p>${p.detail}</p><div class="price-row"><div><div class="price">₹${p.price}</div><small style="color:#71868a">${p.pack}</small></div><button class="small-btn" onclick="toggleItem('${p.name.replace(/'/g,"\\'")}')">${selected.has(p.name)?"✓ Added":"+ Add"}</button></div></article>`).join("");
+ if(!filtered.length) container.innerHTML="<p>No matching items. Try another search.</p>";
+ document.getElementById("count").textContent=selected.size;
+}
+function toggleItem(name){selected.has(name)?selected.delete(name):selected.add(name);render()}
+function openModal(){document.getElementById("backdrop").style.display="flex"}
+function closeModal(){document.getElementById("backdrop").style.display="none"}
+document.getElementById("search").addEventListener("input",render);
+document.getElementById("backdrop").addEventListener("click",e=>{if(e.target.id==="backdrop")closeModal()});
+document.getElementById("orderForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const name=document.getElementById("customerName").value.trim();
+ const phone=document.getElementById("customerPhone").value.trim();
+ const area=document.getElementById("area").value.trim();
+ const notes=document.getElementById("notes").value.trim();
+ const list=[...selected];
+ const subject=encodeURIComponent("Krush Pharma - Stock / Delivery Enquiry");
+ const body=encodeURIComponent(`Hello Krush Pharma,\n\nI would like to enquire about the following items:\n${list.length?list.map(x=>"- "+x).join("\n"):"(Please contact me about availability)"}\n\nName: ${name}\nPhone: ${phone}\nDelivery area / PIN: ${area}\nAdditional notes: ${notes||"None"}\n\nPlease confirm availability, final prices, delivery charges and timing. I understand this is an enquiry, not a confirmed order.`);
+ window.location.href=`mailto:krushpharma.01@gmail.com?subject=${subject}&body=${body}`;
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
